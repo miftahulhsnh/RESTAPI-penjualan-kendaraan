@@ -29,12 +29,14 @@ Route::group(
     }
 );
 
-Route::group(['middleware' => 'jwt.verify'], function () {
-    Route::get('/kendaraan', [KendaraanController::class, 'index']);
-    Route::get('/kendaraan/mobil', [KendaraanController::class, 'getMobil']);
-    Route::get('/kendaraan/motor', [KendaraanController::class, 'getMotor']);
+Route::group([
+    'middleware' => 'api', 'namespace' => 'App\Http\Controllers',
+], function () {
+    Route::get('/kendaraan', 'KendaraanController@index');
+    Route::get('/kendaraan', 'KendaraanController@getMobil');
+    Route::get('/kendaraan', 'KendaraanController@getMotor');
 });
-Route::group(['middleware' => 'jwt.verify'], function () {
-    Route::get('/laporan', [KendaraanController::class, 'laporan']);
-    Route::post('penjualan', [KendaraanController::class, 'jual']);
+Route::group(['middleware' => 'api'], function () {
+    Route::get('/laporan', 'OrderController@laporan');
+    Route::post('penjualan', 'OrderCOntroller@jual');
 });
