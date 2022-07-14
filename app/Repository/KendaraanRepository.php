@@ -4,7 +4,6 @@ namespace App\Repository;
 
 use App\Models\Mobil;
 use App\Models\Motor;
-// use App\Models\User;
 use App\Interfaces\KendaraanRepositoryInterface;
 
 class KendaraanRepository implements KendaraanRepositoryInterface
