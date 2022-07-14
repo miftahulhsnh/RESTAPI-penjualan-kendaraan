@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "0134479e-3646-48f3-a49b-3a3b04b9425e",
+		"name": "APITest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21958473"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"barrows.marie@example.org\",\r\n    \"password\" : \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/auth/profile?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc3NTgxNzMsImV4cCI6MTY1Nzg0NDU3MywibmJmIjoxNjU3NzU4MTc0LCJqdGkiOiJiWWZ1OEdRWFJka25IVlJHIiwic3ViIjoiN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc3NTg4MzgsImV4cCI6MTY1Nzg0NTIzOCwibmJmIjoxNjU3NzU4ODM4LCJqdGkiOiJhZnB4cTdUWDZqaTJDT1BBIiwic3ViIjoiNjJjZjYxNWVhYTI4YjM3NzFhMDg5ZDczIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.pLA_b4OJbGlzNn7SpXDtPUmpPwy8ASeItCwqtjEahGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc3NTg2NTEsImV4cCI6MTY1Nzg0NTA1MSwibmJmIjoxNjU3NzU4NjUxLCJqdGkiOiJkQ0JuVlZSQmZ6N0l1bW1nIiwic3ViIjoiNjJjZjYxNWRhYTI4YjM3NzFhMDg5ZDcyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2Bv6BcXFQ4SYUxqTLFb-iZIO09NZARbCbp-6peYS8_U\",\r\n    \"token_type\": \"beareer\",\r\n    \"token_validity\": 86400\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/profile?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc3NTgxNzMsImV4cCI6MTY1Nzg0NDU3MywibmJmIjoxNjU3NzU4MTc0LCJqdGkiOiJiWWZ1OEdRWFJka25IVlJHIiwic3ViIjoiNjJjZjYxNWRhYTI4YjM3NzFhMDg5ZDcyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.83gLJOIuwP9it5kEcfa_RZVE4f2h37WSnnS2Lxj08r0\"",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NTc3NTgxNzMsImV4cCI6MTY1Nzg0NDU3MywibmJmIjoxNjU3NzU4MTc0LCJqdGkiOiJiWWZ1OEdRWFJka25IVlJHIiwic3ViIjoiNjJjZjYxNWRhYTI4YjM3NzFhMDg5ZDcyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.83gLJOIuwP9it5kEcfa_RZVE4f2h37WSnnS2Lxj08r0\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/auth/register",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kendaraan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kendaraan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
